@@ -8,10 +8,11 @@ const Filter = ({ filter, setFilter }) => {
 
   return (
     <div id='searchField'>
-      filter countries: <input
+      Filter countries: <input
         value={filter}
         onChange={handleFilter}
       />
+      <hr />
     </div>
   )
 }

@@ -5,10 +5,11 @@ const api_key = process.env.REACT_APP_API_KEY
 
 const WeatherDetail = ({ weather }) => {
   return (
-    <div>
+    <div id="weather-section">
+      <hr />
       <h3>Weather in {weather.name}</h3>
       <p id="temperature-paragraph">
-        <b>temperature:</b> {weather.weather.current.temperature} Celsius
+        <b>Temperature:</b> {weather.weather.current.temperature} °C
       </p>
       <p id="icon-paragraph">
         {weather.weather.current.weather_icons.map((url, i) => 
@@ -16,8 +17,9 @@ const WeatherDetail = ({ weather }) => {
         }
       </p>
       <p id="wind-paragraph">
-        <b>wind: </b> {weather.weather.current.wind_speed} mph
-        direction {weather.weather.current.wind_dir}
+        <b>Wind</b><br />
+        speed: {weather.weather.current.wind_speed} mph <br />
+        direction: {weather.weather.current.wind_dir}
       </p>
     </div>
   )

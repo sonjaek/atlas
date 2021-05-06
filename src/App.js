@@ -17,7 +17,7 @@ const App = () => {
   useEffect(getCountriesHook, []);
 
   return (
-    <div>
+    <div id="main-div">
       <Filter filter={filter} setFilter={setFilter} />
       <Display countryData={countryData} filter={filter} setFilter={setFilter} 
       />
